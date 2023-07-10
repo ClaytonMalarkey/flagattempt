@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        .flag {
+            width: 1200px;
+            height: 600px;
+            background: red;
+            position: relative;
+        }
+
+        .maple-leaf {
+            width: 400px;
+            height: 400px;
+            background: white;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            clip-path: polygon(50% 4%, 62% 34%, 95% 35%, 68% 57%, 76% 91%, 50% 70%, 24% 91%, 32% 57%, 5% 35%, 38% 34%);
+        }
+
+        .maple-leaf::before, .maple-leaf::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            width: 50%;
+            height: 100%;
+            background: red;
+        }
+
+        .maple-leaf::before {
+            left: -50%;
+            transform: skew(45deg);
+        }
+
+        .maple-leaf::after {
+            right: -50%;
+            transform: skew(-45deg);
+        }
+    </style>
+</head>
+<body>
+    <div class="flag">
+        <div class="maple-leaf"></div>
+    </div>
+</body>
+</html>
